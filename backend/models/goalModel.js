@@ -1,7 +1,12 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-const goalSchema = mongoose.Schema(
+const goalSchema = Schema(
   {
+    user: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'User',
+    },
     text: {
       type: String,
       required: [true, 'Please add a text value!'],
@@ -16,4 +21,4 @@ const goalSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model('Goal', goalSchema);
+module.exports = model('Goal', goalSchema);
