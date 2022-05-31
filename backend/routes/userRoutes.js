@@ -4,16 +4,12 @@ const {
   loginUser,
   getUser,
 } = require('../controllers/userController');
+const { protect } = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
-// Registering a new user
 router.post('/', registerUser);
-
-// Loging in the user
 router.post('/login', loginUser);
-
-// Get the user data
-router.get('/me', getUser);
+router.get('/me', protect, getUser);
 
 module.exports = router;
