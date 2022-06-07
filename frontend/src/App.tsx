@@ -1,8 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Auth from './pages/Auth';
+import Dashboard from './pages/Dashboard';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello from app!</h1>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
+    </Router>
   );
 }
 
