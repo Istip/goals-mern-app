@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-size: 1.1em;
+}
+
+* {
+  font-family: "Libre Franklin", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.7px;
+  font-weight: 300;
+}
+
+h2,
+h3 {
+  letter-spacing: -0.7px;
+  font-weight: 500;
+}
